@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion</title>
+</head>
+<style>
+    body{
+        background-color: lightskyblue;
+    }
+    .titre, .regle, .tour, .pied_page{
+        text-align: center;
+        color: midnightblue;
+        font-size: 175%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .regle {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        border: 10px double whitesmoke;
+        background-color: aquamarine;
+    }
+    .conteneur {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border: 5px solid whitesmoke;
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .cases {
+        display: flex;
+        border: 1px solid white;
+        justify-content: center; 
+        align-items: center;
+        font-size: 50px;
+        cursor: pointer;
+    }
+    .pied_page {
+        margin: auto;
+        background-color: aqua;
+        border: 10px dotted whitesmoke;
+    }
+    .btn_style {
+    display: block;
+    font-size: 20px;
+    background-color: aquamarine;
+    cursor: pointer;
+    margin: 5px auto;
+    color: midnightblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    @media screen and (max-width: 600px) {
+
+        .titre {
+            font-size: 2rem; 
+            margin-bottom: 10px;
+        }
+        .regle {
+            font-size: 0.9rem; 
+            margin-top: 20px;
+            padding: 5px;
+        }
+        .tour {
+            font-size: 1.2rem;
+        }
+        .conteneur {
+            width: 90vw;       
+            height: 90vw;      
+            max-width: 300px;  
+            max-height: 300px;
+            margin-bottom: 30px;
+        }
+        .cases {
+            font-size: 40px; 
+        }
+        #btn_reset {
+            width: 80%;       
+            padding: 15px;    
+            font-size: 1.1rem;
+        }
+    }
+</style>
+<body>
+    <h1 class="titre">Morpion</h1>
+    <p class="regle">
+        Le but du jeu est d'aligner<br>
+        3 formes (X ou O) selon votre camp.<br>
+        Il faut bien évidemment être le premier.<br>
+        Sinon c'est perdu ou égalité si aucun des deux n'y arrive pas
+    </p>
+    <h2 class="tour">C'est au tour de : </h2>
+    <div class="conteneur">
+        <div id="c1" class="cases" data-index="0"></div>
+        <div id="c2" class="cases" data-index="1"></div>
+        <div id="c3" class="cases" data-index="2"></div>
+        <div id="c4" class="cases" data-index="3"></div>
+        <div id="c5" class="cases" data-index="4"></div>
+        <div id="c6" class="cases" data-index="5"></div>
+        <div id="c7" class="cases" data-index="6"></div>
+        <div id="c8" class="cases" data-index="7"></div>
+        <div id="c9" class="cases" data-index="8"></div>
+    </div>
+    <input type="button" value="Recommencer" id="btn_reset" class="btn_style">
+    <footer class="pied_page">Réalisé par Enzo</footer>
+    <script src=script.js></script>
+</body>
+</html>
